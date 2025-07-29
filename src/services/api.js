@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://proyecto-back-q5si.onrender.com",
 });
 
 API.interceptors.request.use((config) => {
