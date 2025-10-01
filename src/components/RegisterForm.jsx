@@ -9,7 +9,7 @@ export default function RegisterForm({ setShowLogin }) {
   const register = async (e) => {
     e.preventDefault();
     try {
-      await API.post("/register", { name, email, password });
+      await API.post("/api/auth/register", { name, email, password });
       alert("Usuario registrado con éxito. Ahora puedes iniciar sesión.");
       setShowLogin(true);
     } catch (err) {

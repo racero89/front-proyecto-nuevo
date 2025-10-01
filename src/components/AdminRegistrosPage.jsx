@@ -6,7 +6,7 @@ export default function AdminRegistrosPage({ setAuth }) {
 
   const fetchTodosRegistros = async () => {
     try {
-      const res = await API.get("/registros/todos");
+      const res = await API.get("/api/registros/todos");
       setRegistros(res.data);
     } catch (err) {
       console.error(err);

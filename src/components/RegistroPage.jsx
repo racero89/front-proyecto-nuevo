@@ -6,7 +6,7 @@ export default function RegistroPage({ setAuth, isAdmin }) {
 
   const getRegistros = async () => {
     try {
-      const url = isAdmin ? "/registros/todos" : "/registros";
+      const url = isAdmin ? "/api/registros/todos" : "/api/registros";
       const res = await API.get(url);
       setRegistros(res.data);
     } catch (err) {
@@ -17,7 +17,7 @@ export default function RegistroPage({ setAuth, isAdmin }) {
 
   const entrada = async () => {
     try {
-      await API.post("/registros/entrada");
+      await API.post("/api/registros/entrada");
       getRegistros();
     } catch (err) {
       console.error(err);
@@ -27,7 +27,7 @@ export default function RegistroPage({ setAuth, isAdmin }) {
 
   const salida = async () => {
     try {
-      await API.post("/registros/salida");
+      await API.post("/api/registros/salida");
       getRegistros();
     } catch (err) {
       console.error(err);

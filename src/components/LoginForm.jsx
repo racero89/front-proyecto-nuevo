@@ -10,7 +10,7 @@ export default function LoginForm({ setAuth }) {
     e.preventDefault();
 
     try {
-      const res = await API.post("/auth/login", { email, password });
+      const res = await API.post("/api/auth/login", { email, password });
       const token = res.data.token;
 
       localStorage.setItem("token", token);
